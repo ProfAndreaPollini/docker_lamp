@@ -35,12 +35,12 @@ Se ti trovi in un ambiente aziendale con un proxy, potresti dover configurare le
 
 3. **Avvia tutti i servizi:**
    ```powershell
-   docker-compose up -d
+   docker compose up -d
    ```
 
 4. **Verifica che i servizi siano attivi:**
    ```powershell
-   docker-compose ps
+   docker compose ps
    ```
 
 ## 🌐 Accesso ai Servizi
@@ -89,26 +89,26 @@ docker-for-school/
 
 ```powershell
 # Avvia tutti i servizi
-docker-compose up -d
+docker compose up -d
 
 # Arresta tutti i servizi
-docker-compose down
+docker compose down
 
 # Arresta e rimuove anche i volumi (ATTENZIONE: cancella i dati!)
-docker-compose down -v
+docker compose down -v
 
 # Visualizza i log
-docker-compose logs
+docker compose logs
 
 # Visualizza i log di un servizio specifico
-docker-compose logs web
-docker-compose logs database
+docker compose logs web
+docker compose logs database
 
 # Ricostruisci le immagini
-docker-compose build --no-cache
+docker compose build --no-cache
 
 # Riavvia un singolo servizio
-docker-compose restart web
+docker compose restart web
 ```
 
 ### Accesso ai Container
@@ -179,7 +179,7 @@ Modifica in `docker-compose.yml` se necessario.
 ### Container non si avvia
 ```powershell
 # Controlla i log per errori
-docker-compose logs
+docker compose logs
 
 # Verifica che le porte non siano occupate
 netstat -an | findstr :9080
@@ -189,7 +189,7 @@ netstat -an | findstr :3306
 ### Errore di connessione al database
 - Aspetta che MariaDB sia completamente avviato
 - Verifica le credenziali in `docker-compose.yml`
-- Controlla i log: `docker-compose logs database`
+- Controlla i log: `docker compose logs database`
 
 ### Problemi di permessi (Linux/Mac)
 ```bash
