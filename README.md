@@ -145,12 +145,12 @@ docker volume ls
 
 ### Modificare la Configurazione PHP
 - Modifica `apache-php/php.ini`
-- Ricostruisci l'immagine: `docker-compose build web`
-- Riavvia: `docker-compose restart web`
+- Ricostruisci l'immagine: `docker compose build web`
+- Riavvia: `docker compose restart web`
 
 ### Modificare la Configurazione Apache
 - Modifica `apache-config/000-default.conf`
-- Riavvia: `docker-compose restart web`
+- Riavvia: `docker compose restart web`
 
 ### Database
 - Gli script SQL nella cartella `db-init/` vengono eseguiti automaticamente
